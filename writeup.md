@@ -1,6 +1,6 @@
 # Traffic Sign Recognition
 
-Here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to my [project code](https://github.com/kei-sato/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 [//]: # (Image References)
 
@@ -23,8 +23,6 @@ Here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sig
 
 ###Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
 I used the python and numpy to calculate summary statistics of the traffic signs data set as described in my project code:
 
 * The size of training set is 34799
@@ -32,8 +30,6 @@ I used the python and numpy to calculate summary statistics of the traffic signs
 * The size of test set is 12630
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
-
-####2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set.
 
@@ -87,8 +83,6 @@ My final model consisted of the following layers:
 | 14. Softmax					|																	|
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
 To train the model, I used an optimizer, and hyperparamters as follows:
 
 - optimizer: Adam
@@ -99,6 +93,7 @@ To train the model, I used an optimizer, and hyperparamters as follows:
 - sigma: 0.1
 
 My final model results were:
+
 * validation set accuracy of 0.954
 * test set accuracy of 0.93
 
@@ -121,6 +116,15 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image6] ![alt text][image7] ![alt text][image8] ![alt text][image9]
 ![alt text][image10] ![alt text][image11] ![alt text][image12] ![alt text][image13]
 
+These signs might be misclassified because:
+
+- 1st one contains bold virtical yellow line which is same color of the content of the sign
+- 2nd one is dark and contains weird thing on the background of the sign
+- 3rd one is tiny and difficult to identify even for human
+- 4th, 5th ones contain unnecessary white board
+- 6th one is small and slightly deformed
+- 7th, 8th ones are dark
+
 And here are the results of the prediction:
 
 ![alt text][image14]
@@ -128,8 +132,6 @@ And here are the results of the prediction:
 There was one mistake on the third one from the left. It's predicted as "*Beware of ice/snow*", but the correct answer is "*Right-of-way at the next intersection*".
 
 The model was able to correctly guess 7 of the 8 traffic signs, which gives an accuracy of 87.5%. This is less than the accuracy on the test set, but it could be ignored because it's just one mistake.
-
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 The top 5 softmax probabilities for each image are the followings:
 
